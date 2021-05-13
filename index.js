@@ -23,5 +23,4 @@
       }
     });
   };
-  $('button').xclick(10, () => alert('bro'));
 })(jQuery);
