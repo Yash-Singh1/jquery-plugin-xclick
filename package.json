@@ -1,0 +1,20 @@
+{
+  "name": "jquery-plugin-xclick",
+  "version": "1.0.0",
+  "description": "A jQuery plugin that triggers every x clicks",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yash-Singh1/jquery-plugin-xclick.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "author": "Yash Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yash-Singh1/jquery-plugin-xclick/issues"
+  },
+  "homepage": "https://github.com/Yash-Singh1/jquery-plugin-xclick#readme"
+}
