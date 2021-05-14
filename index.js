@@ -7,9 +7,9 @@
       $.data(self, 'times', 0);
     });
     self.click(function () {
+      $.data(self, 'times', $.data(self, 'times') + 1);
       const currentTimes = $.data(self, 'times');
       const currentIter = $.data(self, 'iter');
-      $.data(self, 'times', $.data(self, 'times') + 1);
       if ($.data(self, 'times') === num) {
         handler();
         $.data(self, 'iter', $.data(self) + 1);
@@ -19,7 +19,7 @@
           if ($.data(self, 'times') === currentTimes && $.data(self, 'iter') == currentIter) {
             $.data(self, 'times', 0);
           }
-        }, 100);
+        }, 500);
       }
     });
   };
