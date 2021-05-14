@@ -1,6 +1,6 @@
 {
   "name": "jquery-plugin-xclick",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A jQuery plugin that triggers every x clicks",
   "main": "index.js",
   "repository": {
