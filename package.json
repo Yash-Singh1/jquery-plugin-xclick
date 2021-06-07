@@ -16,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/Yash-Singh1/jquery-plugin-xclick/issues"
   },
-  "homepage": "https://github.com/Yash-Singh1/jquery-plugin-xclick#readme"
+  "homepage": "https://github.com/Yash-Singh1/jquery-plugin-xclick#readme",
+  "devDependencies": {
+    "chalk": "^4.1.1",
+    "express": "^4.17.1",
+    "fkill": "^7.1.1",
+    "jest": "^27.0.4",
+    "puppeteer": "^10.0.0",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
 }

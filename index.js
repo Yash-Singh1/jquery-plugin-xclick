@@ -16,7 +16,10 @@
         $.data(self, 'times', 0);
       } else {
         setTimeout(() => {
-          if ($.data(self, 'times') === currentTimes && $.data(self, 'iter') == currentIter) {
+          if (
+            $.data(self, 'times') === currentTimes &&
+            $.data(self, 'iter') == currentIter
+          ) {
             $.data(self, 'times', 0);
           }
         }, 500);
