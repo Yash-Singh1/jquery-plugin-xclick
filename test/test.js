@@ -10,6 +10,7 @@ describe(
     }, timeout);
 
     it('n click should work', async () => {
+      await page.reload();
       const text = await page.evaluate(() => {
         const n = Math.floor(Math.random() * 100 + 1);
         $('button').xclick(n, () => $('#logs').html('click'));
@@ -22,6 +23,7 @@ describe(
     });
 
     it('should reset every 500 ms', async () => {
+      await page.reload();
       await page.evaluate(async () => {
         const n = Math.floor(Math.random() * 100 + 1);
         $('button').xclick(n, () => $('#logs').html('click'));
@@ -39,6 +41,7 @@ describe(
     });
 
     it('should invalidate timers on next iteration', async () => {
+      await page.reload();
       const text = await page.evaluate(() => {
         const n = Math.floor(Math.random() * 100 + 1);
         $('button').xclick(n, () =>
