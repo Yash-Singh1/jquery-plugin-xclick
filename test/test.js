@@ -5,7 +5,7 @@ describe('xclick helper function', () => {
     await page.goto('http://localhost:5432/test/index.html');
   });
 
-  it('n click should work', async () => {
+  it('triggers event every x clicks', async () => {
     await page.reload();
     const text = await page.evaluate(() => {
       const n = Math.floor(Math.random() * 100 + 1);
