@@ -41,7 +41,9 @@ describe(
     it('should invalidate timers on next iteration', async () => {
       const text = await page.evaluate(() => {
         const n = Math.floor(Math.random() * 100 + 1);
-        $('button').xclick(n, () => $('#logs').html($('#logs').html() + 'click'));
+        $('button').xclick(n, () =>
+          $('#logs').html($('#logs').html() + 'click')
+        );
         for (let i = 0; i < 2 * n; i++) {
           $('button').click();
         }
