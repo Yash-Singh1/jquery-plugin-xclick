@@ -52,7 +52,7 @@ describe(
         }
         return $('#logs').html();
       });
-      expect(text).toEqual('clickclick');
+      expect(text).toEqual('not clickedclickclick');
     });
   },
   timeout
