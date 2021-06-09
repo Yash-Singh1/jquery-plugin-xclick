@@ -1,7 +1,7 @@
 .github/
+test/
 jest.config.js
 puppeteer_environment.js
 setup.js
 teardown.js
-test.js
 .prettierrc.json
