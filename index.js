@@ -3,7 +3,7 @@
     var self = this;
     $.data(self, 'times', 0);
     $.data(self, 'iter', 1);
-    $(document).mousemove(function () {
+    $(document).on('mousemove', function () {
       $.data(self, 'times', 0);
     });
     self.on('click', function () {
