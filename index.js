@@ -6,7 +6,7 @@
     $(document).mousemove(function () {
       $.data(self, 'times', 0);
     });
-    self.click(function () {
+    self.on('click', function () {
       $.data(self, 'times', $.data(self, 'times') + 1);
       const currentTimes = $.data(self, 'times');
       const currentIter = $.data(self, 'iter');
