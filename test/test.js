@@ -54,6 +54,23 @@ describe(
       });
       expect(text).toEqual('not clickedclickclick');
     });
+
+    it('should reset on mousemove', async () => {
+      await page.reload();
+      await page.evaluate(() => {
+        const n = Math.floor(Math.random() * 100 + 1);
+        $('button').xclick(n, () => $('#logs').html('click'));
+        for (let i = 0; i < n - 1; i++) {
+          $('button').click();
+        }
+      });
+      await page.mouse.move(100, 100);
+      const text = await page.evaluate(() => {
+        $('button').click();
+        return $('#logs').html();
+      });
+      expect(text).toEqual('not clicked');
+    });
   },
   timeout
 );
