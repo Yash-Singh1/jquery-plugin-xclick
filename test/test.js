@@ -1,5 +1,3 @@
-const timeout = 1500;
-
 describe(
   'xclick helper function',
   () => {
@@ -7,7 +5,7 @@ describe(
     beforeAll(async () => {
       page = await global.__BROWSER__.newPage();
       await page.goto('http://localhost:5432/test/index.html');
-    }, timeout);
+    });
 
     it('n click should work', async () => {
       await page.reload();
@@ -71,6 +69,5 @@ describe(
       });
       expect(text).toEqual('not clicked');
     });
-  },
-  timeout
+  }
 );
