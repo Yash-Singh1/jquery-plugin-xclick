@@ -13,7 +13,7 @@ describe(
         const n = Math.floor(Math.random() * 100 + 1);
         $('button').xclick(n, () => $('#logs').html('click'));
         for (let i = 0; i < n; i++) {
-          $('button').click();
+          $('button').trigger('click');
         }
         return $('#logs').html();
       });
@@ -26,12 +26,12 @@ describe(
         const n = Math.floor(Math.random() * 100 + 1);
         $('button').xclick(n, () => $('#logs').html('click'));
         for (let i = 0; i < n - 1; i++) {
-          $('button').click();
+          $('button').trigger('click');
         }
       });
       setTimeout(async () => {
         const text = await page.evaluate(async () => {
-          $('button').click();
+          $('button').trigger('click');
           return $('#logs').html();
         });
         expect(text).toEqual('not clicked');
@@ -46,7 +46,7 @@ describe(
           $('#logs').html($('#logs').html() + 'click')
         );
         for (let i = 0; i < 2 * n; i++) {
-          $('button').click();
+          $('button').trigger('click');
         }
         return $('#logs').html();
       });
@@ -59,12 +59,12 @@ describe(
         const n = Math.floor(Math.random() * 100 + 1);
         $('button').xclick(n, () => $('#logs').html('click'));
         for (let i = 0; i < n - 1; i++) {
-          $('button').click();
+          $('button').trigger('click');
         }
       });
       await page.mouse.move(100, 100);
       const text = await page.evaluate(() => {
-        $('button').click();
+        $('button').trigger('click');
         return $('#logs').html();
       });
       expect(text).toEqual('not clicked');
