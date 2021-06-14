@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-npm install --save jquery-plugin-xclick
+npm install jquery-plugin-xclick
 ```
 
 ## Usage
