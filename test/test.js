@@ -65,4 +65,13 @@ describe('xclick helper function', () => {
     });
     expect(text).toEqual('not clicked');
   });
+
+  it('should allow chaining', async () => {
+    await page.reload();
+    await page.evaluate(() => {
+      $('button')
+        .xclick(1, () => $('#logs').html('click'))
+        .text('Click me!');
+    });
+  });
 });
